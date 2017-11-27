@@ -14,6 +14,11 @@ class TestSportsTeam < MiniTest::Test
 
   def test_players
     assert_equal(["Ronaldo", "Benzema", "Bale"], @team.players)
-
   end
+
+  def test_coach
+    assert_equal("Zidane", @team.coach)
+  end
+
+
 end
