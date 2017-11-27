@@ -42,7 +42,7 @@ class Library
     rental_details               = get_rental_details_from_title(title)
     rental_details[STUDENT_NAME] = student_name
     rental_details[DATE]         = date
-    @books.select{|book| book[:title] == title}.first()[:rental_details] = rental_details
+    @books.select{|book| book[TITLE] == title}.first()[RENTAL_DETAILS] = rental_details
   end
 
 end
