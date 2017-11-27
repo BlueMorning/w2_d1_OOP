@@ -6,7 +6,9 @@ class Library
     @books = array_of_books
   end
 
-
+  def get_book_from_title(title)
+    return @books.select{|book| book[:title] == title}.first
+  end
 
 
 end

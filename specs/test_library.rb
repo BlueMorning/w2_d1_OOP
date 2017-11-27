@@ -41,4 +41,9 @@ class TestLibrary < MiniTest::Test
     return @library.books
   end
 
+  def test_get_book_from_title
+    info_book = @library.get_book_from_title("change_your_life")
+    assert_equal(@books[2], info_book)
+  end
+
 end
