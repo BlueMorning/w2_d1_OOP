@@ -30,6 +30,9 @@ class SportsTeam
     @players << name
   end
 
+  def player_in_team(name)
+    return @players.include?(name)
+  end
 
 
 end
