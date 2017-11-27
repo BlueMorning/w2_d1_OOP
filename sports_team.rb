@@ -35,7 +35,9 @@ class SportsTeam
     return @players.include?(name)
   end
 
-
+  def team_has_won_or_lost(win)
+    @points += 1 if win
+  end
 
 
 end
