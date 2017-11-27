@@ -35,7 +35,14 @@ class Library
               }
           }
 
-    @books.push(book)      
+    @books.push(book)
+  end
+
+  def change_rental_details(title, student_name, date)
+    rental_details               = get_rental_details_from_title(title)
+    rental_details[STUDENT_NAME] = student_name
+    rental_details[DATE]         = date
+    @books.select{|book| book[:title] == title}.first()[:rental_details] = rental_details
   end
 
 end
