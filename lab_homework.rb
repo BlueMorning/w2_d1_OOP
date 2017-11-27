@@ -19,5 +19,13 @@ class Student
     @student_name = name
   end
 
+  def set_cohort_number(number)
+    @cohort_number = number
+  end
+
+  def talk
+    return "I can talk!"
+  end
+
 
 end
