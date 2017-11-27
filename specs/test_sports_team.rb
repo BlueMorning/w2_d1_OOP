@@ -12,4 +12,8 @@ class TestSportsTeam < MiniTest::Test
     assert_equal("Real Madrid", @team.team_name)
   end
 
+  def test_players
+    assert_equal(["Ronaldo", "Benzema", "Bale"], @team.players)
+
+  end
 end
