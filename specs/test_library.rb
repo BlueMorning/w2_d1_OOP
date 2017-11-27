@@ -62,7 +62,6 @@ class TestLibrary < MiniTest::Test
     @library.change_rental_details("learn_ruby", "Hulk", "28/11/2017")
     assert_equal("Hulk",       @library.get_rental_details_from_title("learn_ruby")[:student_name])
     assert_equal("28/11/2017", @library.get_rental_details_from_title("learn_ruby")[:date])
-    p @books
   end
 
 end
