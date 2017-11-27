@@ -6,6 +6,8 @@ class TestLibrary < MiniTest::Test
 
   def setup
 
+    @title = "think_black_box"
+
     @books = [
           {title: "lord_of_the_rings",
           rental_details: {
@@ -49,6 +51,11 @@ class TestLibrary < MiniTest::Test
   def test_get_rental_details_from_title
     info_book = @library.get_rental_details_from_title("change_your_life")
     assert_equal(@books[2][:rental_details], info_book)
+  end
+
+  def test_add_new_book
+    @library.add_new_book(@title)
+    assert_equal(4, @library.books.length)
   end
 
 end
